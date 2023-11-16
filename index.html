@@ -1,0 +1,71 @@
+<!-- 
+
+    Simple login screen 
+    Asks for first name, last name, email, password,  DoB and phone number 
+
+    Additional features: asking to sign up for a newsletter, terms and conditions,copyright (not a feature)
+                         profile picture 
+
+    Also should include a link sending a user to a sign in screen in case they do have an account 
+    Forgot Username / Password Link(later on)
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Screen</title>
+</head>
+<body>
+    <h1>Create an Account</h1>
+
+    <form> 
+        <fieldset id="login_signup">
+            <div class="first_name">
+                <label class="firstN" for="first_name">First Name</label>
+                <input type="text" placeholder="ex. John" required>
+            </div>
+            <div class="last_name">
+                <label class="lastN" for="last_name">Last Name</label>
+                <input type="text" placeholder="ex. Smith" required>
+            </div>
+            <div class="email">
+                <label class="email-label" for="email">Email</label>
+                <input type="email" placeholder="ex. John.Smith@email.com" required>
+            </div>
+            <div class="new_password">
+                <label class="password-label" for="new_password">Password</label>
+                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+            </div>
+            <div class="date_of_birth">
+                <label class="birth-label" for="date_of_birth">Date of Birth</label>
+                <input type="date" required>
+            </div>
+            <div class="phone_number">
+                <label class="phonum" for="phone_number">Phone Number</label>
+                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx" required>
+            </div>
+
+            <label for="terms-and-conditions">
+                <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+            </label>
+            <label for="newsletter">
+                <input class="inline" id="newsletter" type="checkbox" required name="newsletter"> Sign up for our newsletter? We'll send out weekly news
+            </label>
+            <div class="submit">
+                <label class="submit-label" for="submit"></label>
+                <button class="button">Sign up</button>
+             </div>
+
+        </fieldset>
+        <fieldset>
+            <div>
+                <p>Already have an account? <a class="login_screen" href="./login.html" target="_blank"> Log in </a> </p>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
